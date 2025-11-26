@@ -1,4 +1,31 @@
 {
+<<<<<<< HEAD
+  "name": "mission3",
+=======
+<<<<<<< HEAD
+  "name": "githubactionpractice",
+>>>>>>> 933beac ([fix] config)
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node --files src/server.ts",
+    "start": "node dist/server.js",
+    "lint": "eslint . --ext .ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+<<<<<<< HEAD
+=======
+    "express": "^5.1.0"
+=======
   "name": "mission3",
   "version": "1.0.0",
   "main": "index.js",
@@ -17,6 +44,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+>>>>>>> 933beac ([fix] config)
     "@prisma/client": "^6.13.0",
     "aws-sdk": "^2.1692.0",
     "bcrypt": "^6.0.0",
@@ -59,5 +87,9 @@
   },
   "prisma": {
     "seed": "node prisma/seed.js"
+<<<<<<< HEAD
+=======
+>>>>>>> 99af8d6 ([feat] test to github action)
+>>>>>>> 933beac ([fix] config)
   }
 }
