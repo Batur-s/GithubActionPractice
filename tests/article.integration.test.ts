@@ -5,14 +5,13 @@ import { ArticleRepository } from "../src/repositories/articleRepository";
 
 describe("Article API Integration Test", () => {
   let accessToken: string;
-  let articleId: number;
   let userId: number;
+  let articleId: number;
 
   beforeAll(async () => {
     const tokens = await loginAndGetToken();
     accessToken = tokens.accessToken;
     userId = tokens.userId;
-
 
     if (!server.listening) {
       await new Promise<void>((resolve) => server.listen(0, resolve));
