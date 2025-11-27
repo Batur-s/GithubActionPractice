@@ -16,7 +16,7 @@ jobs:
           uses: appleboy/ssh-action@v0.1.6
           with:
             host: $({ secrets.REMOTE_IP })
-            username: batur0306
-            key: $({ secrets.PEM_TEST })
-            port: 3000
+            username: ec2-user
+            key: $({ secrets.DEV_TEST })
+            port: 22
             script: |
