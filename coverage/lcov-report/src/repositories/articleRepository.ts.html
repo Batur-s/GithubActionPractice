@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">23.07% </span>
+                <span class="strong">92.3% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/13</span>
+                <span class='fraction'>12/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">27.27% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -106,36 +106,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,12 +143,12 @@
 import { Prisma } from "@prisma/client";
 &nbsp;
 export class ArticleRepository {
-<span class="fstat-no" title="function not covered" >  async </span>createArticle(data: { userId: number; title: string; content: string }) {
-<span class="cstat-no" title="statement not covered" >    return prisma.article.create({ data });</span>
+  async createArticle(data: { userId: number; title: string; content: string }) {
+    return prisma.article.create({ data });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>findMany(where: Prisma.ArticleWhereInput, skip: number, take: number) {
-<span class="cstat-no" title="statement not covered" >    return prisma.article.findMany({</span>
+  async findMany(where: Prisma.ArticleWhereInput, skip: number, take: number) {
+    return prisma.article.findMany({
       skip,
       take,
       orderBy: { createdAt: "desc" },
@@ -157,23 +157,23 @@ export class ArticleRepository {
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>findById(id: number) {
-<span class="cstat-no" title="statement not covered" >    return prisma.article.findUnique({</span>
+  async findById(id: number) {
+    return prisma.article.findUnique({
       where: { id },
       select: { id: true, userId: true, title: true, content: true, createdAt: true },
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>updatedArticle(id: number, data: { title?: string; content?: string }) {
-    const updateData: { title?: string; content?: string } = <span class="cstat-no" title="statement not covered" >{};</span>
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (data.title !== undefined) <span class="cstat-no" title="statement not covered" >updateData.title = data.title;</span></span>
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (data.content !== undefined) <span class="cstat-no" title="statement not covered" >updateData.content = data.content;</span></span>
+  async updatedArticle(id: number, data: { title?: string; content?: string }) {
+    const updateData: { title?: string; content?: string } = {};
+    if (data.title !== undefined) updateData.title = data.title;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (data.content !== undefined) <span class="cstat-no" title="statement not covered" >updateData.content = data.content;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return prisma.article.update({ where: { id }, data: updateData });</span>
+    return prisma.article.update({ where: { id }, data: updateData });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>deleteArticle(id: number): Promise&lt;void&gt; {
-<span class="cstat-no" title="statement not covered" >    await prisma.article.delete({ where: { id } });</span>
+  async deleteArticle(id: number): Promise&lt;void&gt; {
+    await prisma.article.delete({ where: { id } });
   }
 }
 &nbsp;
@@ -184,7 +184,7 @@ export default new ArticleRepository();</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-11-27T08:25:53.153Z
+                at 2025-11-27T09:09:47.737Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
