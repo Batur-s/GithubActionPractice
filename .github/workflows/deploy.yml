@@ -20,5 +20,4 @@ jobs:
             key: ${{ secrets.DEV_TEST }}
             port: 22
             script: |
-              whoami
               ls -al
