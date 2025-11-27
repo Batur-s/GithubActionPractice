@@ -1,4 +1,4 @@
-name: test with env
+name: test with create .env
 
 on: [push, pull_request]
 
