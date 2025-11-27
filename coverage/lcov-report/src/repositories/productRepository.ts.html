@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>2/7</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>2/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -117,28 +117,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -153,23 +136,40 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import prisma from "../lib/prisma";
 import { Prisma } from "@prisma/client";
 import { ProductCreateDTO, ProductUpdateDTO, ProductQueryDTO } from "../dtos/product.dto";
 &nbsp;
 export class ProductRepository {
-  async createProduct(data: { userId: number; name: string; description: string; price: number; tags: string }) {
-    return prisma.product.create({ data });
+<span class="fstat-no" title="function not covered" >  async </span>createProduct(data: { userId: number; name: string; description: string; price: number; tags: string }) {
+<span class="cstat-no" title="statement not covered" >    return prisma.product.create({ data });</span>
   }
 &nbsp;
-  async findMany(where: Prisma.ProductWhereInput, skip: number, take: number) {
-    return prisma.product.findMany({
+<span class="fstat-no" title="function not covered" >  async </span>findMany(where: Prisma.ProductWhereInput, skip: number, take: number) {
+<span class="cstat-no" title="statement not covered" >    return prisma.product.findMany({</span>
       skip,
       take,
       orderBy: { createdAt: "desc" },
@@ -185,8 +185,8 @@ export class ProductRepository {
     });
   }
 &nbsp;
-  async findById(id: number) {
-    return prisma.product.findUnique({
+<span class="fstat-no" title="function not covered" >  async </span>findById(id: number) {
+<span class="cstat-no" title="statement not covered" >    return prisma.product.findUnique({</span>
       where: { id },
       select: {
         id: true,
@@ -200,12 +200,12 @@ export class ProductRepository {
     });
   }
 &nbsp;
-  async updateProduct(id: number, data: Partial&lt;{ name: string; description: string; price: number; tags: string }&gt;) {
-    return prisma.product.update({ where: { id }, data });
+<span class="fstat-no" title="function not covered" >  async </span>updateProduct(id: number, data: Partial&lt;{ name: string; description: string; price: number; tags: string }&gt;) {
+<span class="cstat-no" title="statement not covered" >    return prisma.product.update({ where: { id }, data });</span>
   }
 &nbsp;
-  async deleteProduct(id: number) {
-    return prisma.product.delete({ where: { id } });
+<span class="fstat-no" title="function not covered" >  async </span>deleteProduct(id: number) {
+<span class="cstat-no" title="statement not covered" >    return prisma.product.delete({ where: { id } });</span>
   }
 }</pre></td></tr></table></pre>
 
@@ -214,7 +214,7 @@ export class ProductRepository {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-11-27T05:11:24.655Z
+                at 2025-11-27T08:25:53.153Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
