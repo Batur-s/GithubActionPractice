@@ -10,7 +10,7 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
 
-            - name: .env setting
+            - name: .env creating
               run: |
                echo "Port=3000" >> .env
                echo "SESSION_SECRET=your_session_secret" >> .env
