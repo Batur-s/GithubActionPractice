@@ -1,0 +1,22 @@
+name: deploy mission11 auto
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs: 
+      deploy:
+        name: deploy
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Build and deploy
+          uses: appleboy/ssh-action@v0.1.6
+          with:
+            host: $({ secrets.REMOTE_IP })
+            username: batur0306
+            key: $({ secrets.PEM_TEST })
+            port: 3000
+            script: |
