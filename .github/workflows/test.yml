@@ -32,7 +32,7 @@
 
 name: test with create .env test
 
-on: [pull_request]
+on: [push]
 
 jobs:
   build:
