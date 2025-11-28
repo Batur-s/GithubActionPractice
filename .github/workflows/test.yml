@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:15
+        image: postgres
         env:
           POSTGRES_USER: testuser
           POSTGRES_PASSWORD: testpass
@@ -72,12 +72,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Wait for Postgres
-        run: |
-          until pg_isready -h localhost -p 5432 -U testuser; do
-            echo "Waiting for Postgres..."
-            sleep 2
-          done
+      # - name: Wait for Postgres
+      #   run: |
+      #     until pg_isready -h localhost -p 5432 -U testuser; do
+      #       echo "Waiting for Postgres..."
+      #       sleep 2
+      #     done
 
       - name: Prisma Generate
         run: npx prisma generate
