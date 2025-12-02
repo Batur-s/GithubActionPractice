@@ -20,8 +20,10 @@ jobs:
             key: ${{ secrets.DEV_TEST }}
             port: 22
             script: |
-             cd /home/ec2-user/app
-             git pull origin main
-             docker compose down
-             docker compose up -d --build
-             docker ps
+              cd /home/ec2-user/app
+              find . -mindepth 1 -not -name '.git' -delete
+              git fetch --all
+              git reset --hard origin/main
+              docker compose down
+              docker compose up -d --build
+              docker ps
