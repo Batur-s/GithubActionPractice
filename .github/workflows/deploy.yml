@@ -20,4 +20,8 @@ jobs:
             key: ${{ secrets.DEV_TEST }}
             port: 22
             script: |
-              ls -al
+             cd /home/ec2-user/app
+             git pull origin main
+             docker compose down
+             docker compose up -d --build
+             docker ps
